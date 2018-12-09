@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "2968"// البرفكس هنا
+var prefix = "#"// البرفكس هنا
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -34,8 +34,8 @@ client.on('ready', () => {
  
  client.on('ready',async () => {
 console.log("Starting..");
-let g = client.guilds.get("499633648866164737");
-let c = g.channels.get("500651445327233034");
+let g = client.guilds.get("518756105166520320");
+let c = g.channels.get("518821629963534366");
 if(c.type === 'voice') {
 c.join();
 setInterval(() => {
@@ -47,7 +47,7 @@ console.log("Failed To Join:\n The Channel Type isn't \"text\"");
 });
  
  
-const adminprefix = "2968";
+const adminprefix = "#";
 const devs = ['506211849100984320'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -62,7 +62,7 @@ client.user.setUsername(argresult).then
     message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
 return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
 } else
-  if (message.content.startsWith(adminprefix + 'av')) {
+  if (message.content.startsWith(adminprefix + 'setavatar')) {
 client.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else    

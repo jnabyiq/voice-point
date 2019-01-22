@@ -44,7 +44,7 @@ client.on('message', msg => {
 }
 })
 client.on('ready', () => {
-    client.channels.get("323160008411971585").join(); 
+    client.channels.get("535938621983686656").join(); 
     });
  
  var prefix = "-"
